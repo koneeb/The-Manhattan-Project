@@ -6,7 +6,7 @@ from streamlit_query_functions import calculate_drink_prices
 
 # Import comprehensive list of ingredients
 ingredients_list = get_ingredients_list()
-ingredients_list.insert(0, "N/A")
+ingredients_list.insert(0, "Select")
 
 # Import Drink Prices
 prices = calculate_drink_prices()
@@ -42,7 +42,7 @@ def gen_booze_mask(df, booze_criteria):
 
 def gen_alt_ingredient_mask(df, alt_ingredient):
     """Function accepts the data and the alt_ingredient selected and generates a mask to filter"""
-    if alt_ingredient != "N/A":
+    if alt_ingredient != "Select":
         alt_ingredient_mask = df["ingredients_list"].str.contains(alt_ingredient)
     else:
         alt_ingredient_mask = pd.Series([True] * len(df.index))
