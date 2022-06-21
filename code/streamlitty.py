@@ -403,8 +403,7 @@ with st.container():
     				${alt5_cost} per drink? Imagine ordering that at a bar... it would cost double or even triple that!
     				"""
                     )
-    else:
-        st.markdown("![Alt Text](https://media.giphy.com/media/8Iv5lqKwKsZ2g/giphy.gif)")[image]
+
 
 #######################################
 # Third Container - Acknowledgements
