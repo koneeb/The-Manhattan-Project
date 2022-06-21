@@ -80,11 +80,10 @@ st.header("The Manhattan Project")
 # Side Bar - Search Parameters
 #######################################
 
-
 # Ingredient Count Slider
 st.sidebar.write(
     """
-	# Ingredients:
+	# Ingredient Count:
 	First, select the *maximum* number of ingredients you'd like in your cocktail (defaults to 5)"""
 )
 num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
@@ -92,7 +91,7 @@ num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
 # Main Booze Options Checkboxes
 st.sidebar.write(
     """
-	# Main Liquors:
+	# Main Liquor(s):
 	Next, select some of the main booze options you have handy or would like to use in your cocktail."""
 )
 vodka = st.sidebar.checkbox("Vodka")
@@ -112,6 +111,8 @@ alt_ingredient = st.sidebar.selectbox("", ingredients_list)
 # Refresh Button
 st.sidebar.write("""Once you select all of your drink specifications click here:""")
 button = st.sidebar.button("Find My Drink")
+
+
 
 
 #######################################
