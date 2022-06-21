@@ -87,7 +87,7 @@ button = st.sidebar.button("Find My Drink")
 # Ingredient Count Slider
 st.sidebar.write(
     """
-	# Ingredients:
+	# Ingredient Count:
 	First, select the *maximum* number of ingredients you'd like in your cocktail (defaults to 5)"""
 )
 num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
@@ -95,7 +95,7 @@ num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
 # Main Booze Options Checkboxes
 st.sidebar.write(
     """
-	# Main Liquors:
+	# Main Liquor(s):
 	Next, select some of the main booze options you have handy or would like to use in your cocktail."""
 )
 vodka = st.sidebar.checkbox("Vodka")
@@ -107,8 +107,8 @@ rum = st.sidebar.checkbox("Rum")
 # Other Ingredient Dropdown
 st.sidebar.write(
     """
-	# Other Ingredient:
-	Finally, select another ingredient you'd like to include in your cocktail"""
+	# Other Ingredient(s):
+	Finally, select any other ingredient(s) you'd like to include in your cocktail"""
 )
 alt_ingredient = st.sidebar.selectbox("", ingredients_list)
 
