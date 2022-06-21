@@ -109,11 +109,8 @@ st.sidebar.write(
 alt_ingredient = st.sidebar.selectbox("", ingredients_list)
 
 # Refresh Button
-st.sidebar.write("""Once you select all of your drink specifications click here:""")
+st.sidebar.write("""Let's find your drink!:""")
 button = st.sidebar.button("Find My Drink")
-
-
-
 
 #######################################
 # Main Container - 2 columns
