@@ -6,7 +6,7 @@ from streamlit_query_functions import calculate_drink_prices
 
 # Import comprehensive list of ingredients
 ingredients_list = get_ingredients_list()
-ingredients_list.insert(0, "Select")
+ingredients_list.insert(0, "N/A")
 
 # Import Drink Prices
 prices = calculate_drink_prices()
@@ -80,10 +80,14 @@ st.header("The Manhattan Project")
 # Side Bar - Search Parameters
 #######################################
 
+# Refresh Button
+st.sidebar.write("""Once you select all of your drink specifications click here:""")
+button = st.sidebar.button("Find My Drink")
+
 # Ingredient Count Slider
 st.sidebar.write(
     """
-	# Ingredient Count:
+	# Ingredients:
 	First, select the *maximum* number of ingredients you'd like in your cocktail (defaults to 5)"""
 )
 num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
@@ -91,7 +95,7 @@ num_ingredients_tot = st.sidebar.slider("", 2, 12, 5)
 # Main Booze Options Checkboxes
 st.sidebar.write(
     """
-	# Main Liquor(s):
+	# Main Liquors:
 	Next, select some of the main booze options you have handy or would like to use in your cocktail."""
 )
 vodka = st.sidebar.checkbox("Vodka")
@@ -103,15 +107,11 @@ rum = st.sidebar.checkbox("Rum")
 # Other Ingredient Dropdown
 st.sidebar.write(
     """
-	# Other Ingredient(s):
-	Finally, select any other ingredient(s) you'd like to include in your cocktail"""
+	# Other Ingredient:
+	Finally, select another ingredient you'd like to include in your cocktail"""
 )
 alt_ingredient = st.sidebar.selectbox("", ingredients_list)
 
-# Refresh Button
-st.sidebar.write("""Let's find your drink!""")
-button = st.sidebar.button("Find My Drink")
-st.sidebar.text(" ")
 
 #######################################
 # Main Container - 2 columns
@@ -413,3 +413,4 @@ with st.container():
 	All data is sourced from the [Cocktail Database](https://www.thecocktaildb.com/). This dashboard was created with the free to use platform [Streamlit](https://streamlit.io/). For any inquiries on the coding or the structure of this project connect to our [GitHub](https://github.com/ElliottMetzler/the-manhattan-project). Enjoy your drinks!
 	"""
     )
+
