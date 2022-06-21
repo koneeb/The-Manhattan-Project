@@ -6,7 +6,7 @@ from streamlit_query_functions import calculate_drink_prices
 
 # Import comprehensive list of ingredients
 ingredients_list = get_ingredients_list()
-ingredients_list.insert(0, "N/A")
+ingredients_list.insert(0, "Select")
 
 # Import Drink Prices
 prices = calculate_drink_prices()
@@ -80,9 +80,6 @@ st.header("The Manhattan Project")
 # Side Bar - Search Parameters
 #######################################
 
-# Refresh Button
-st.sidebar.write("""Once you select all of your drink specifications click here:""")
-button = st.sidebar.button("Find My Drink")
 
 # Ingredient Count Slider
 st.sidebar.write(
@@ -107,10 +104,14 @@ rum = st.sidebar.checkbox("Rum")
 # Other Ingredient Dropdown
 st.sidebar.write(
     """
-	# Other Ingredient:
-	Finally, select another ingredient you'd like to include in your cocktail"""
+	# Other Ingredient(s):
+	Finally, select any other ingredient(s) you'd like to include in your cocktail"""
 )
 alt_ingredient = st.sidebar.selectbox("", ingredients_list)
+
+# Refresh Button
+st.sidebar.write("""Once you select all of your drink specifications click here:""")
+button = st.sidebar.button("Find My Drink")
 
 
 #######################################
