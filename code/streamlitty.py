@@ -200,6 +200,8 @@ with st.container():
             col2.write(
                 """There are no unique cocktails that follow your drink specifications. Try changing the maximum number of ingredients, selecting a different liquor, or choosing a different specified ingredient."""
             )
+    else:
+        st.markdown("![Alt Text](https://media.giphy.com/media/8Iv5lqKwKsZ2g/giphy.gif)")[image]
 
 #######################################
 # Second Container - Alternate Drinks
